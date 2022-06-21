@@ -10,7 +10,7 @@ const levels = {
 };
 
 // To change level
-const currentLevel = levels.ez;
+let currentLevel = levels.ez
 
 let time = currentLevel;
 let score = 0;
@@ -23,25 +23,30 @@ const scoreDispaly = document.querySelector("#score");
 const timeDisplay = document.querySelector("#time");
 const message = document.querySelector("#message");
 const seconds = document.querySelector("#seconds");
+const difficultyEz = document.querySelector("#ez")
+const difficultyMed = document.querySelector("#med")
+const difficultyHard = document.querySelector("#hard")
 
 const sentences = [
-  'from bs4 import BeautifulSoup',
-  'def getpoints(drivers, date, year):',
+  "from bs4 import BeautifulSoup",
+  "def getpoints(drivers, date, year):",
   'for index, data in enumerate(soup.find_all("td", class_="dark bold")):',
   'race["points"] = int(data.get_text())',
-  'r = requests.get(url)',
+  "r = requests.get(url)",
   'for data in soup.find_all("a", class_="dark ArchiveLink"):',
-  'else:',
-  'return list',
-  'squishlist = squishpoints(pointsanddates)',
+  "else:",
+  "return list",
+  "squishlist = squishpoints(pointsanddates)",
   'filename = os.path.join(root, "html", "index.html")',
   'if __name__ == "__main__":',
 ];
 
+// const sentences = ["1", "2"]
+
 // Initialize Game
 function init() {
   // Show number of seconds in UI
-  seconds.innerHTML = currentLevel;
+  seconds.innerHTML = time;
   // Load sentence form array
   showSentence(sentences);
   // Start matching on sentence input
@@ -50,7 +55,24 @@ function init() {
   setInterval(countdown, 1000);
   // Check game status
   setInterval(checkStatus, 50);
+  // Difficulty buttons
+  /*difficultyEz.addEventListener("click", diffEz)
+  difficultyHard.addEventListener("click", diffHard)
+  difficultyMed.addEventListener("click", diffMed)*/
 }
+
+/* Change Difficulty
+function diffEz() {
+  if (isPlaying === true){
+  currentlevel = levels.ez}
+}
+function diffMed() {
+  if (isPlaying === true){
+  currentlevel = levels.med}
+}
+function diffHard() {
+  currentlevel = levels.hard
+}*/
 
 // Start match
 function startMatch() {
@@ -108,6 +130,9 @@ function checkStatus() {
   const gameOver = "Game over!!!";
   if (!isPlaying && time === 0) {
     message.innerHTML = gameOver;
+    message.classList.add("red");
     score = -1;
+  } else {
+    message.classList.remove("red");
   }
 }
