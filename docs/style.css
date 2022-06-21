@@ -1,0 +1,80 @@
+.main {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    color: #fff;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.bg_color {
+    background-color: #376f9e;
+}
+
+.whitemid {
+    color: #fff;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.reset {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    color: #000;
+    background-color: #ffd748;
+    text-align: center;
+    padding: 10px 0px;
+
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.float {
+    float: left;
+    width: 50%;
+}
+
+.centerfloat {
+    width: 50%;
+    margin: auto;
+}
+
+.bubble {
+    background-color: #ffd748;
+    border: 2px #ffd748 solid;
+    border-radius: 5px;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 0px 5px;
+}
+
+.clr {
+    clear: both;
+}
+
+.input {
+    width: 50%;
+    padding: 10px;
+}
+
+.difficulty {
+    width: 33.3%;
+    margin-bottom: 5px;
+    color: #ffd748;
+    background-color: #306288;
+}
